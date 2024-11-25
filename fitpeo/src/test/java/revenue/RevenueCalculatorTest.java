@@ -63,7 +63,7 @@ public class RevenueCalculatorTest {
 
 	    public void moveSliderToValue(int currentValue, int targetValue) throws InterruptedException {
 	        for (int i = 0; i < targetValue - currentValue; i++) {
-	            Thread.sleep(10); // Slight delay for smooth slider movement
+	            Thread.sleep(20); // Slight delay for smooth slider movement
 	            robot.keyPress(KeyEvent.VK_RIGHT);
 	            robot.keyRelease(KeyEvent.VK_RIGHT);
 	        }
