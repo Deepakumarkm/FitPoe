@@ -128,7 +128,7 @@ public class RevenueCalculatorTest {
 	    private int selectCPTOption(String cptCode) throws InterruptedException {
 	        WebElement cptCheckbox = driver.findElement(By.xpath("//p[text()='" + cptCode + "']//following-sibling::label//input"));
 	        scrollToElement(cptCheckbox);
-	        clickElementUsingJS(cptCheckbox);
+	        cptCheckbox.click();
 
 	        WebElement cptPriceElement = driver.findElement(By.xpath("//p[text()='" + cptCode + "']//following-sibling::label//span[contains(@class,'MuiTypography')]"));
 	        return getIntFromText(cptPriceElement);
